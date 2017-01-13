@@ -96,6 +96,9 @@ sensor:
       - precip_probability
   - platform: pi_hole
     host: 192.168.15.202
+    monitored_conditions:
+      - percentage_today
+      - queries_today
   - platform: speedtest
     minute:
       - 0
