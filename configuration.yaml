@@ -115,6 +115,14 @@ sensor:
       - ping
       - download
       - upload
+  - platform: systemmonitor
+    resources:
+      - type: disk_use_percent
+        arg: /
+      - type: memory_use_percent
+      - type: processor_use
+      - type: last_boot
+      - type: since_last_boot
 
 # Test Garage control
 cover:
