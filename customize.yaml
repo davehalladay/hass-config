@@ -29,11 +29,11 @@ sensor.dark_sky_precip:
 sensor.dark_sky_precip_probability:
   friendly_name: Precipitation Probability
 
-sensor.pi_hole_queries_today:
+sensor.pihole_queries_today:
   friendly_name: Pi.Hole Queries
   icon: mdi:dns
 
-sensor.pi_hole_percentage_today:
+sensor.pihole_percentage_today:
   friendly_name: Pi.Hole Percentage
   icon: mdi:dns
 
