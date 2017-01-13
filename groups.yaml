@@ -20,3 +20,17 @@ weather_darksky:
     - sensor.dark_sky_precip
     - sensor.dark_sky_precip_probability
     - sensor.dark_sky_wind_speed
+
+network:
+  name: Network
+  view: yes
+  entities:
+    - groups.internet
+
+internet:
+  name: Internet
+  entities:
+    - sensor.speedtest_download
+    - sensor.speedtest_upload
+    - sensor.speedtest_ping
+    - sensor.pi_hole

@@ -94,6 +94,16 @@ sensor:
       - humidity
       - cloud_cover
       - precip_probability
+  - platform: pi_hole
+    host: 192.168.15.202
+  - platform: speedtest
+    minute:
+      - 0
+      - 30
+    monitored_conditions:
+      - ping
+      - download
+      - upload
 
 # Test Garage control
 cover:
