@@ -32,15 +32,15 @@ sensor.dark_sky_precip_probability:
 sensor.pi_hole:
   friendly_name: Pi.Hole
   icon: mdi:dns
-  
+
 sensor.speedtest_download:
    friendly_name: Download Speed
    icon: mdi:download
 
- sensor.speedtest_ping:
-   friendly_name: Ping
-   icon: mdi:pin
+sensor.speedtest_ping:
+  friendly_name: Ping
+  icon: mdi:pin
 
- sensor.speedtest_upload:
-   friendly_name: Upload Speed
-   icon: mdi:upload
+sensor.speedtest_upload:
+  friendly_name: Upload Speed
+  icon: mdi:upload
