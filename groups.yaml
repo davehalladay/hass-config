@@ -3,7 +3,7 @@
 garage_opener:
   name: Garage
   view: no
-  entitites:
+  entities:
     - cover.garage_door
 
 environment:
