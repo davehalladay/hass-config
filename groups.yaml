@@ -25,7 +25,7 @@ network:
   name: Network
   view: yes
   entities:
-    - groups.internet
+    - group.internet
 
 internet:
   name: Internet
