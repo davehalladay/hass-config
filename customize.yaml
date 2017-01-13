@@ -35,7 +35,7 @@ sensor.pihole_queries_today:
 
 sensor.pihole_percentage_today:
   friendly_name: Pi.Hole Percentage
-  icon: mdi:dns
+  icon: mdi:block-helper
 
 sensor.speedtest_download:
    friendly_name: Download Speed
