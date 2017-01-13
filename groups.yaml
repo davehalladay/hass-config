@@ -1,5 +1,10 @@
 # Groups
 
+garage_opener:
+  name: Garage
+  entitites:
+    - cover.garage_door
+
 environment:
   view: yes
   name: Weather
