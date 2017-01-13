@@ -39,5 +39,5 @@ internet:
     - sensor.speedtest_download
     - sensor.speedtest_upload
     - sensor.speedtest_ping
-    - sensor.pi_hole_queries_today
-    - sensor.pi_hole_percentage_today
+    - sensor.pi_hole.attributes.queries_today
+    - sensor.pi_hole.attributes.percentage_today
