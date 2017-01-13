@@ -99,6 +99,14 @@ sensor:
     monitored_conditions:
       - percentage_today
       - queries_today
+  - platform: template
+    sensors:
+      pihole_queries_today:
+        value_template: '{{ states.sensor.pihole.attributes.queries_today }}'
+        friendly_name: 'Queries Today'
+      pihole_percentage_today:
+        value_template: '{{ states.sensor.pihole.attributes.percentage_today }}'
+        friendly_name: 'Percentage Today'
   - platform: speedtest
     minute:
       - 0
