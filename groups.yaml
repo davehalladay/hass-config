@@ -2,6 +2,7 @@
 
 garage_opener:
   name: Garage
+  view: no
   entitites:
     - cover.garage_door
 
