@@ -1,0 +1,31 @@
+ensor.dark_sky_summary:
+  friendly_name: Todays Forecast
+  icon: mdi:briefcase
+  
+sensor.dark_sky_temperature:
+  friendly_name: Current Temperature
+  
+sensor.dark_sky_apparent_temperature:
+  friendly_name: Feels Like
+     
+sensor.dark_sky_cloud_coverage:
+  friendly_name: Cloud Coverage
+    
+sensor.dark_sky_daily_high_temperature:
+  friendly_name: Todays High Temperature
+   
+sensor.dark_sky_daily_low_temperature:
+  friendly_name: Todays Low Temperature
+  
+sensor.dark_sky_wind_speed:
+  friendly_name: Current Wind Speed
+  
+sensor.dark_sky_humidity:
+  friendly_name: Current Humitidy
+  
+sensor.dark_sky_precip:
+  friendly_name: Precipitation Type  
+  
+sensor.dark_sky_precip_probability:
+  friendly_name: Precipitation Probability 
+

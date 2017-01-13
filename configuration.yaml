@@ -1,0 +1,154 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 28
+  # metric for Metric, imperial for Imperial
+  unit_system: imperial
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: America/New_York
+  customize: !include customize.yaml
+
+# Show links to resources in log and frontend
+# introduction:
+
+# Enables the frontend
+frontend:
+
+http:
+  api_password: !secret hass_api_password
+  ssl_certificate: /config/fullchain.pem
+  ssl_key: /config/privkey.pem
+ 
+# Checks for available updates
+updater:
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time.
+history:
+
+# View all events in a logbook
+logbook:
+
+# Track the sun
+sun:
+
+device_tracker:
+  - platform: owntracks
+
+# Zones
+zone:
+  name: Church
+  latitude: !secret church_latitude
+  longitude: !secret church_longitude
+  radius: 200
+  icon: mdi:church
+
+zone 2:
+  name: !secret elem_name
+  latitude: !secret elem_latitude
+  longitude: !secret elem_longitude
+  radius: 250
+  icon: mdi:school
+
+zone 3:
+  name: !secret mschool_name
+  latitude: !secret mschool_latitude
+  longitude: !secret mschool_longitude
+  radius: 250
+  icon: mdi:school
+
+zone 4:
+  name: Home
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  radius: 200
+  icon: mdi:home
+
+zone 5:
+  name: Group
+  latitude: !secret group_latitude
+  longitude: !secret group_longitude
+  radius: 200
+  icon: mdi:group
+
+ifttt:
+  key: !secret ifttt_key
+
+# Weather Prediction
+sensor:
+  - platform: darksky
+    api_key: !secret dark_sky_key
+    monitored_conditions:
+      - summary
+      - temperature
+      - temperature_max
+      - temperature_min
+      - apparent_temperature
+      - wind_speed
+      - humidity
+      - cloud_cover
+      - precip_probability
+    
+# Test Garage control
+cover:
+- platform: command_line
+  covers:
+    garage_door:
+      command_open: curl --data '' 192.168.15.100:8888/api
+      command_close: curl --data '' 192.168.15.100:8888/api
+      command_stop: curl --data '' 192.168.15.100:8888/api
+      command_state: curl 192.168.15.100:8888/api
+      friendly_name: Garage Door
+
+notify:
+ - name: halladay_bot
+   platform: telegram
+   api_key: !secret telegram_key
+   chat_id: !secret telegram_chat_id
+
+mqtt:
+  broker: m13.cloudmqtt.com
+  port: !secret mqtt_port
+  username: !secret mqtt_user
+  password: !secret mqtt_password
+
+automation:
+  alias: Notify David if garage is open for one hour
+  trigger:
+    platform: state
+    entity_id: cover.garage_door
+    from: 'closed'
+    to: 'open'
+    for:
+      hours: 1
+      minutes: 0
+      seconds: 0
+  action:
+    - service: notify.halladay_bot
+      data:
+        message: The garage has been open for one hour!
+
+group:
+  weather_darksky:
+    name: Weather Info
+    entities:
+    - sensor.dark_sky_summary
+    - sensor.dark_sky_temperature
+    - sensor.dark_sky_apparent_temperature
+    - sensor.dark_sky_daily_high_temperature
+    - sensor.dark_sky_daily_low_temperature
+    - sensor.dark_sky_humidity
+    - sensor.dark_sky_cloud_coverage
+    - sensor.dark_sky_precip
+    - sensor.dark_sky_precip_probability
+    - sensor.dark_sky_wind_speed
+
