@@ -1,5 +1,5 @@
 sensor.dark_sky_summary:
-  friendly_name: Todays Forecast
+  friendly_name: Current Condition
   icon: mdi:briefcase
 
 sensor.dark_sky_temperature:
@@ -30,11 +30,11 @@ sensor.dark_sky_precip_probability:
   friendly_name: Precipitation Probability
 
 sensor.pihole_queries_today:
-  friendly_name: Pi.Hole Queries
+  friendly_name: Pi.Hole Queries Today
   icon: mdi:dns
 
 sensor.pihole_percentage_today:
-  friendly_name: Pi.Hole Percentage
+  friendly_name: Pi.Hole Percentage Blocked
   icon: mdi:block-helper
 
 sensor.speedtest_download:

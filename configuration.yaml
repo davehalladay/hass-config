@@ -38,6 +38,9 @@ logbook:
 # Track the sun
 sun:
 
+# History logging with InfluxDB
+influxdb:
+
 device_tracker:
   - platform: owntracks
 
