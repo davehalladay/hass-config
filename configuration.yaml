@@ -113,6 +113,9 @@ sensor:
       garage_door_status:
         value_template: '{{ states.cover.door_control.state }}'
         friendly_name: 'Door Status'
+      david_phone_battery:
+        value_template: '{{ states.device_tracker.david_david_phone.attributes.battery }}'
+        unit_of_measurement: '%'
   - platform: speedtest
     minute:
       - 0
@@ -133,6 +136,12 @@ sensor:
     api_key: !secret xbox_api_key
     xuid:
       - !secret xbox_userid_1
+      - !secret xbox_userid_2
+      - !secret xbox_userid_3
+      - !secret xbox_userid_4
+  - platform: usps
+    username: !secret usps_username
+    password: !secret usps_password
 
 # Test Garage control
 cover:

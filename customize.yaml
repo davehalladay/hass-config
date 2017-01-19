@@ -56,3 +56,7 @@ cover.garage_door:
 sensor.garage_door_status:
   friendly_name: Door Status
   icon: mdi:reload
+
+sensor.david_phone_battery:
+  friendly_name: David Phone Battery
+  icon: mdi:battery-outline

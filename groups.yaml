@@ -7,6 +7,13 @@ garage_opener:
     - cover.door_control
     - sensor.garage_door_status
 
+family:
+  name: Family
+  view: no
+  entities:
+    - device_tracker.david_david_phone
+    - sensor.david_phone_battery
+
 environment:
   view: yes
   name: Weather
