@@ -50,7 +50,9 @@ sensor.speedtest_upload:
   icon: mdi:upload
 
 cover.garage_door:
+  friendly_name: Door Control
   icon: mdi:glassdoor
 
 sensor.garage_door_status:
+  friendly_name: Door Status
   icon: mdi:reload
