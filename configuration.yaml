@@ -112,7 +112,7 @@ sensor:
         friendly_name: 'Percentage Today'
       garage_door_status:
         value_template: '{{ states.cover.garage_door.state }}'
-        friendly_name: 'Garage Status'
+        friendly_name: 'Door Status'
   - platform: speedtest
     minute:
       - 0
@@ -139,7 +139,7 @@ cover:
       command_close: curl --data '' 192.168.15.100:8888/api
       command_stop: curl --data '' 192.168.15.100:8888/api
       command_state: curl 192.168.15.100:8888/api
-      friendly_name: Garage Door
+      friendly_name: Door Control
 
 notify:
  - name: halladay_bot

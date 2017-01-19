@@ -53,5 +53,4 @@ cover.garage_door:
   icon: mdi:glassdoor
 
 sensor.garage_door_status:
-  friendly_name: Garage Status
   icon: mdi:reload
