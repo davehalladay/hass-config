@@ -111,8 +111,8 @@ sensor:
         value_template: '{{ states.sensor.pihole.attributes.percentage_today }}'
         friendly_name: 'Percentage Today'
       garage_door_status:
+        value_template: '{{ states.cover.garage_door.state }}'
         friendly_name: 'Garage Status'
-        value_template: '{{states.cover.garage_door.state}}'
   - platform: speedtest
     minute:
       - 0
