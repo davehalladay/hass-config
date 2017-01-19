@@ -4,7 +4,7 @@ garage_opener:
   name: Garage
   view: no
   entities:
-    - cover.garage_door
+    - cover.door_control
     - sensor.garage_door_status
 
 environment:
