@@ -5,6 +5,7 @@ garage_opener:
   view: no
   entities:
     - cover.garage_door
+    - sensor.garage_door_status
 
 environment:
   view: yes
