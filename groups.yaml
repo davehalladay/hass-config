@@ -52,8 +52,3 @@ server_monitor:
     - sensor.last_boot
     - sensor.since_last_boot
     - sensor.ram_use
-
-xbox_live:
-  name: XBox Live
-  entitites:
-    - sensor.zerothdave
