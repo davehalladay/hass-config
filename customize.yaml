@@ -64,5 +64,5 @@ sensor.david_phone_battery:
 sun.sun:
   hidden: true
 
-sensor.pi_hole:
+sensor.pihole:
   hidden: true
