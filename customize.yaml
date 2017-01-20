@@ -60,3 +60,9 @@ sensor.garage_door_status:
 sensor.david_phone_battery:
   friendly_name: David Phone Battery
   icon: mdi:battery-outline
+
+sun.sun:
+  hidden: true
+
+sensor.pi_hole:
+  hidden: true
