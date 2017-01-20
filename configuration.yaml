@@ -109,7 +109,8 @@ sensor:
         friendly_name: 'Queries Today'
       pihole_percentage_today:
         value_template: '{{ states.sensor.pihole.attributes.percentage_today }}'
-        friendly_name: 'Percentage Today'
+        friendly_name: 'Blocked Today'
+        unit_of_measurement: '%'
       garage_door_status:
         value_template: '{{ states.cover.door_control.state }}'
         friendly_name: 'Door Status'
