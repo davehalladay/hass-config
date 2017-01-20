@@ -59,3 +59,10 @@ server_monitor:
     - sensor.last_boot
     - sensor.since_last_boot
     - sensor.ram_use
+
+hidden_stuff:
+  name: Hidden Items
+  hidden: true
+  entities:
+    - sun.sun
+    - sensor.pi_hole
