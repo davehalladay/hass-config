@@ -133,13 +133,6 @@ sensor:
       - type: processor_use
       - type: last_boot
       - type: since_last_boot
-  - platform: xbox_live
-    api_key: !secret xbox_api_key
-    xuid:
-      - !secret xbox_userid_1
-      - !secret xbox_userid_2
-      - !secret xbox_userid_3
-      - !secret xbox_userid_4
   - platform: usps
     username: !secret usps_username
     password: !secret usps_password
