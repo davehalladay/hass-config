@@ -164,7 +164,7 @@ automation:
   alias: Notify David if garage is open for one hour
   trigger:
     platform: state
-    entity_id: cover.garage_door
+    entity_id: cover.door_control
     from: 'closed'
     to: 'open'
     for:
