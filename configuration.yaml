@@ -17,8 +17,6 @@ frontend:
 
 http:
   api_password: !secret hass_api_password
-  ssl_certificate: /config/fullchain.pem
-  ssl_key: /config/privkey.pem
 
 # Checks for available updates
 updater:
