@@ -83,7 +83,14 @@ zone 5:
 ifttt:
   key: !secret ifttt_key
 
-# Weather Prediction
+binary_sensor:
+  - platform: command_line
+    command: curl http://192.168.15.100:8888/api/cal
+    name: David Meeting
+    sensor_class: occupancy
+    payload_on: True
+    payload_off: False
+
 sensor:
   - platform: darksky
     api_key: !secret dark_sky_key
