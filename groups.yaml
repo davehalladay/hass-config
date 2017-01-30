@@ -14,6 +14,12 @@ family:
     - device_tracker.david_david_phone
     - sensor.david_phone_battery
 
+office:
+  name: Office
+  view: no
+  entities:
+    - sensor.david_meeting_status
+
 environment:
   view: yes
   name: Weather

@@ -61,8 +61,17 @@ sensor.david_phone_battery:
   friendly_name: David Phone Battery
   icon: mdi:battery-outline
 
+sensor.david_meeting_status:
+  icon: mdi:worker
+
 sun.sun:
   hidden: true
 
 sensor.pihole:
+  hidden: true
+
+sensor.usps_package:
+  hidden: true
+
+binary_sensor.david_meeting:
   hidden: true

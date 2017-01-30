@@ -122,6 +122,9 @@ sensor:
       david_phone_battery:
         value_template: '{{ states.device_tracker.david_david_phone.attributes.battery }}'
         unit_of_measurement: '%'
+      david_meeting_status:
+        value_template: '{% if is_state("binary_sensor.david_meeting", "on") %}In Meeting{% else %}Free{% endif %}'
+        friendly_name: David Status
   - platform: speedtest
     minute:
       - 0
