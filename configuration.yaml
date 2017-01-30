@@ -141,6 +141,7 @@ sensor:
   - platform: usps
     username: !secret usps_username
     password: !secret usps_password
+    name: usps_package
 
 # Test Garage control
 cover:
