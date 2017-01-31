@@ -21,6 +21,9 @@ for calendar in schedule.calendars:
                 subject = event.getSubject()
                 start_time = datetime.fromtimestamp(mktime(event.getStart()))
                 end_time = datetime.fromtimestamp(mktime(event.getEnd()))
-                conn.execute('insert into cal values(?, ?, ?)', (subject, start_time, end_time))
+                show_as = event.toJson()['ShowAs']
+                conn.execute('insert into cal values(?, ?, ?, ?)', (subject, start_time, end_time, show_as))
         except sqlite3.IntegrityError:
             pass
+    conn.commit()
+
