@@ -83,7 +83,7 @@ ifttt:
 
 binary_sensor:
   - platform: command_line
-    command: sudo office365_venv/bin/python3 office365_meeting_status.py
+    command: curl http://192.168.15.100:8888/api/cal
     name: David Meeting
     sensor_class: occupancy
     payload_on: True
