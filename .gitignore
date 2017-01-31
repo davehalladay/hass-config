@@ -1,2 +1,4 @@
 secrets.yaml
-
+nginx.conf
+.idea/
+main.py
