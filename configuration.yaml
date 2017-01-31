@@ -83,7 +83,7 @@ ifttt:
 
 binary_sensor:
   - platform: command_line
-    command: ./test.sh
+    command: ./config/test.sh
     name: David Meeting
     sensor_class: occupancy
     payload_on: True
