@@ -83,7 +83,7 @@ ifttt:
 
 binary_sensor:
   - platform: command_line
-    command: ~/home-assistant/hass-config/office365_venv/bin/python3 office_365_sync.py
+    command: ~/home-assistant/hass-config/office365_venv/bin/python3 ~/home-assistant/hass-config/office365_meeting_status.py
     name: David Meeting
     sensor_class: occupancy
     payload_on: True
