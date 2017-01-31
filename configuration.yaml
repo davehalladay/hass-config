@@ -83,7 +83,7 @@ ifttt:
 
 binary_sensor:
   - platform: command_line
-    command: get_cal_status
+    command: sudo get_cal_status
     name: David Meeting
     sensor_class: occupancy
     payload_on: True
