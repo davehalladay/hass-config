@@ -78,6 +78,13 @@ zone 5:
   radius: 200
   icon: mdi:group
 
+zone 6:
+  name: !secret gym_name
+  latitude: !secret gym_latitude
+  longitude: !secret gym_longitude
+  radius: 300
+  icon: mdi:dumbbell
+
 ifttt:
   key: !secret ifttt_key
 
