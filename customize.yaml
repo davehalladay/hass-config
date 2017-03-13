@@ -29,11 +29,11 @@ sensor.dark_sky_precip:
 sensor.dark_sky_precip_probability:
   friendly_name: Precipitation Probability
 
-sensor.pihole_queries_today:
+sensor.pihole_dns_queries_today:
   friendly_name: DNS Queries Today
   icon: mdi:dns
 
-sensor.pihole_percentage_today:
+sensor.pihole_ads_percentage_blocked_today:
   friendly_name: Ads Blocked Today
   icon: mdi:block-helper
 
