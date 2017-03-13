@@ -54,8 +54,8 @@ internet:
     - sensor.speedtest_download
     - sensor.speedtest_upload
     - sensor.speedtest_ping
-    - sensor.pihole_queries_today
-    - sensor.pihole_percentage_today
+    - sensor.pihole_dns_queries_today
+    - sensor.pihole_ads_percentage_blocked_today
 
 server_monitor:
   name: Server Status
