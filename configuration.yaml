@@ -116,13 +116,6 @@ sensor:
       - dns_queries_today
   - platform: template
     sensors:
-      pihole_queries_today:
-        value_template: '{{ states.sensor.pihole.attributes.dns_queries_today }}'
-        friendly_name: 'Queries Today'
-      pihole_percentage_today:
-        value_template: '{{ states.sensor.pihole.attributes.ads_percentage_today }}'
-        friendly_name: 'Blocked Today'
-        unit_of_measurement: '%'
       garage_door_status:
         value_template: '{{ states.cover.door_control.state }}'
         friendly_name: 'Door Status'
