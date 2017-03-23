@@ -48,7 +48,7 @@ device_tracker:
     port: !secret netgear_port
     interval_seconds: 30
     consider_home: 240
-    track_new_devices: yes
+    track_new_devices: no
 
 # Zones
 zone:
