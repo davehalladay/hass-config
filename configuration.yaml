@@ -41,6 +41,10 @@ influxdb:
 
 device_tracker:
   - platform: owntracks
+  - platform: netgear
+    host: !secret netgear_host
+    username: !secret netgear_user
+    password: !secret netgear_password
 
 # Zones
 zone:
