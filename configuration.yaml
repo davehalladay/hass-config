@@ -45,6 +45,7 @@ device_tracker:
     host: !secret netgear_host
     username: !secret netgear_user
     password: !secret netgear_password
+    port: 80
 
 # Zones
 zone:
