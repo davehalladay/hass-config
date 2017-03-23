@@ -12,7 +12,7 @@ family:
   view: no
   entities:
     - device_tracker.david_david_phone
-    - sensor.david_phone_battery
+    - device_tracker.android1a59bea43fd717b5
 
 office:
   name: Office
