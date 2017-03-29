@@ -64,7 +64,7 @@ device_tracker:
     password: !secret netgear_password
     port: !secret netgear_port
     interval_seconds: 30
-    consider_home: 240
+    consider_home: 60
 
 ifttt:
   key: !secret ifttt_key
