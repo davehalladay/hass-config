@@ -23,6 +23,8 @@ updater:
 
 # Discover some devices automatically
 discovery:
+  ignore:
+    - netgear_router
 
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
