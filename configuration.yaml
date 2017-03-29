@@ -164,10 +164,4 @@ automation:
       data:
         message: The garage has been open for one hour!
 
-camera:
-  name: David
-  platform: generic
-  still_image_url: https://maps.googleapis.com/maps/api/staticmap?center={{ states.device_tracker.david_david_phone.attributes.latitude }},{{ states.device_tracker.david_david_phone.attributes.longitude }}&zoom=13&size=500x500&maptype=roadmap&markers=color:blue%7Clabel:D%7C{{ states.device_tracker.david_david_phone.attributes.latitude }},{{ states.device_tracker.david_david_phone.attributes.longitude }}
-  limit_refetch_to_url_change: true
-
 group: !include groups.yaml
