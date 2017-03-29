@@ -60,6 +60,7 @@ sun:
 influxdb:
 
 device_tracker:
+  - platform: owntracks
   - platform: netgear
     host: !secret netgear_host
     username: !secret netgear_user
