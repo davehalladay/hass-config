@@ -29,9 +29,27 @@ conversation:
 
 # Enables support for tracking state changes over time.
 history:
+  exclude:
+    entities:
+      - sensor.disk_use_
+      - sensor.last_boot
+      - sensor.pihole_ads_percentage_blocked_today
+      - sensor.pihole_dns_queries_today
+      - sensor.ram_use
+      - sensor.since_last_boot
+      - sun.sun
 
 # View all events in a logbook
 logbook:
+  exclude:
+    entities:
+      - sensor.disk_use_
+      - sensor.last_boot
+      - sensor.pihole_ads_percentage_blocked_today
+      - sensor.pihole_dns_queries_today
+      - sensor.ram_use
+      - sensor.since_last_boot
+      - sun.sun
 
 # Track the sun
 sun:
@@ -40,7 +58,6 @@ sun:
 influxdb:
 
 device_tracker:
-  - platform: owntracks
   - platform: netgear
     host: !secret netgear_host
     username: !secret netgear_user
@@ -49,49 +66,6 @@ device_tracker:
     interval_seconds: 30
     consider_home: 240
     track_new_devices: no
-
-# Zones
-zone:
-  name: Church
-  latitude: !secret church_latitude
-  longitude: !secret church_longitude
-  radius: 200
-  icon: mdi:church
-
-zone 2:
-  name: !secret elem_name
-  latitude: !secret elem_latitude
-  longitude: !secret elem_longitude
-  radius: 250
-  icon: mdi:school
-
-zone 3:
-  name: !secret mschool_name
-  latitude: !secret mschool_latitude
-  longitude: !secret mschool_longitude
-  radius: 250
-  icon: mdi:school
-
-zone 4:
-  name: Home
-  latitude: !secret home_latitude
-  longitude: !secret home_longitude
-  radius: 200
-  icon: mdi:home
-
-zone 5:
-  name: Group
-  latitude: !secret group_latitude
-  longitude: !secret group_longitude
-  radius: 200
-  icon: mdi:group
-
-zone 6:
-  name: !secret gym_name
-  latitude: !secret gym_latitude
-  longitude: !secret gym_longitude
-  radius: 300
-  icon: mdi:dumbbell
 
 ifttt:
   key: !secret ifttt_key
