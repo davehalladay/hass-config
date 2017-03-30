@@ -163,13 +163,13 @@ automation:
         minutes: 15
         seconds: 0
     condition:
-      - condition: state
-        entity: group.all_devices
-        state: 'not_home'
+      condition: state
+      entity_id: group.all_devices
+      state: 'not_home'
     action:
       - service: notify.halladay_bot
         data:
-          message: The garage has been open for one hour
+          message: The garage has been left open
   - alias: Turn on office sign when Dave in Meeting
     trigger:
       platform: state
