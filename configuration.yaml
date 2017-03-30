@@ -169,24 +169,24 @@ automation:
     action:
       - service: notify.halladay_bot
         data:
-          message: The garage has been open for one hour!
-- alias: Turn on office sign when Dave in Meeting
-  trigger:
-    platform: state
-    entity_id: binary_sensor.david_meeting
-    from: 'off'
-    to: 'on'
-  action:
-    service: switch.turn_on
-    entity_id: switch.office_sign
-- alias: Turn off office sign after Dave in Meeting
-  trigger:
-    platform: state
-    entity_id: binary_sensor.david_meeting
-    from: 'on'
-    to: 'off'
-  action:
-    service: switch.turn_off
-    entity_id: switch.office_sign
+          message: The garage has been open for one hour
+  - alias: Turn on office sign when Dave in Meeting
+    trigger:
+      platform: state
+      entity_id: binary_sensor.david_meeting
+      from: 'off'
+      to: 'on'
+    action:
+      service: switch.turn_on
+      entity_id: switch.office_sign
+  - alias: Turn off office sign after Dave in Meeting
+    trigger:
+      platform: state
+      entity_id: binary_sensor.david_meeting
+      from: 'on'
+      to: 'off'
+    action:
+      service: switch.turn_off
+      entity_id: switch.office_sign
 
 group: !include groups.yaml
