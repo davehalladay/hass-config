@@ -68,6 +68,7 @@ device_tracker:
     port: !secret netgear_port
     interval_seconds: 30
     consider_home: 60
+    track_new_devices: false
 
 ifttt:
   key: !secret ifttt_key
@@ -151,19 +152,41 @@ mqtt:
   password: !secret mqtt_password
 
 automation:
-  alias: Notify David if garage is open for one hour
+  - alias: Notify David if garage is open
+    trigger:
+      platform: state
+      entity_id: cover.door_control
+      from: 'closed'
+      to: 'open'
+      for:
+        hours: 0
+        minutes: 15
+        seconds: 0
+    condition:
+      - condition: state
+        entity: group.all_devices
+        state: 'not_home'
+    action:
+      - service: notify.halladay_bot
+        data:
+          message: The garage has been open for one hour!
+- alias: Turn on office sign when Dave in Meeting
   trigger:
     platform: state
-    entity_id: cover.door_control
-    from: 'closed'
-    to: 'open'
-    for:
-      hours: 1
-      minutes: 0
-      seconds: 0
+    entity_id: binary_sensor.david_meeting
+    from: 'off'
+    to: 'on'
   action:
-    - service: notify.halladay_bot
-      data:
-        message: The garage has been open for one hour!
+    service: switch.turn_on
+    entity_id: switch.office_sign
+- alias: Turn off office sign after Dave in Meeting
+  trigger:
+    platform: state
+    entity_id: binary_sensor.david_meeting
+    from: 'on'
+    to: 'off'
+  action:
+    service: switch.turn_off
+    entity_id: switch.office_sign
 
 group: !include groups.yaml
