@@ -173,17 +173,17 @@ automation:
   - alias: Notify David if garage is open
     trigger:
       platform: state
-      entity_id: group.all_devices
-      from: 'home'
-      to: 'not_home'
+      entity_id: cover.door_control
+      from: 'closed'
+      to: 'open'
       for:
         hours: 0
         minutes: 10
         seconds: 0
     condition:
       condition: state
-      entity_id: cover.door_control
-      state: 'open'
+      entity_id: group.all_devices
+      state: 'not_home'
     action:
       - service: notify.halladay_bot
         data:
