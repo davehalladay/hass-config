@@ -170,5 +170,23 @@ automation:
     action:
       service: switch.turn_off
       entity_id: switch.office_sign
+  - alias: Notify David if garage is open
+    trigger:
+      platform: state
+      entity_id: group.all_devices
+      from: 'home'
+      to: 'not_home'
+      for:
+        hours: 0
+        minutes: 10
+        seconds: 0
+    condition:
+      condition: state
+      entity_id: cover.door_control
+      state: 'open'
+    action:
+      - service: notify.halladay_bot
+        data:
+          message: The garage has been left open with nobody home.
 
 group: !include groups.yaml
