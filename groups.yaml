@@ -14,12 +14,17 @@ family:
     - device_tracker.david_david_phone
     - device_tracker.android1a59bea43fd717b5
 
+bedroom:
+  name: Bedroom
+  view: no
+  entities:
+    - switch.bed_lights
+
 office:
   name: Office
   view: no
   entities:
     - sensor.david_meeting_status
-    - switch.office_sign
 
 environment:
   view: yes
