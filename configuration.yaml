@@ -139,10 +139,15 @@ cover:
       command_state: curl 192.168.15.100:8888/api
       friendly_name: Door Control
 
+telegram_bot:
+  platform: polling
+  api_key: !secret telegram_key
+  allowed_chat_ids:
+    - !secret telegram_chat_id
+
 notify:
  - name: halladay_bot
    platform: telegram
-   api_key: !secret telegram_key
    chat_id: !secret telegram_chat_id
 
 mqtt:
