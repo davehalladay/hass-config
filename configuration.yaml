@@ -156,6 +156,10 @@ mqtt:
   username: !secret mqtt_user
   password: !secret mqtt_password
 
+google:
+  client_id: !secret google_client_id
+  client_secret: !secret google_client_secret
+
 automation:
   - alias: Notify David if garage is open
     trigger:
