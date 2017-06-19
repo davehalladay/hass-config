@@ -172,6 +172,10 @@ automation:
       entity_id: cover.door_control
       from: 'closed'
       to: 'open'
+      for:
+        hours: 0
+        minutes: 0
+        seconds: 5
     condition:
       condition: state
       entity_id: group.all_devices
