@@ -74,3 +74,6 @@ binary_sensor.david_meeting:
 
 sensor.printer_status:
   icon: mdi:printer
+
+device_tracker.canone3a1e9:
+  hidden: true

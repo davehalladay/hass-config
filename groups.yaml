@@ -53,6 +53,7 @@ network:
   entities:
     - group.internet
     - group.server_monitor
+    - group.device_monitor
 
 internet:
   name: Internet
@@ -71,3 +72,9 @@ server_monitor:
     - sensor.last_boot
     - sensor.since_last_boot
     - sensor.ram_use
+
+device_monitor:
+  name: Devices
+  entities:
+    - sensor.printer_status
+    
