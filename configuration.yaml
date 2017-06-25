@@ -122,7 +122,7 @@ sensor:
         {% else %}
           Unknown
         {% endif %}"
-        friendly_name: Printer Status
+        friendly_name: Printer
 
   - platform: speedtest
     minute:
