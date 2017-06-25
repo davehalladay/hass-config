@@ -71,3 +71,6 @@ sensor.usps_package_packages:
 
 binary_sensor.david_meeting:
   hidden: true
+
+sensor.printer_status:
+  icon: mdi:printer
