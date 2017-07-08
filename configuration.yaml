@@ -65,7 +65,7 @@ sun:
 influxdb:
 
 camera:
-  - platform: armcrest
+  - platform: amcrest
     host: 192.168.15.190
     username: admin
     password: !secret armcrest_password
