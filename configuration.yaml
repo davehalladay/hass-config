@@ -64,6 +64,12 @@ sun:
 # History logging with InfluxDB
 influxdb:
 
+camera:
+  - platform: armcrest
+    host: 192.168.15.190
+    username: admin
+    password: !secret armcrest_password
+
 device_tracker:
   - platform: owntracks
   - platform: netgear
