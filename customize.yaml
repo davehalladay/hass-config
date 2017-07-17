@@ -77,3 +77,6 @@ sensor.printer_status:
 
 device_tracker.canone3a1e9:
   hidden: true
+
+sensor.amcrest_camera_motion_detected:
+  hidden: true
