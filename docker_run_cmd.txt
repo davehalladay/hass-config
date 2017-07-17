@@ -1,1 +1,5 @@
 docker run -d --name="home-assistant" -v ~/home-assistant/hass-config:/config -v /etc/localtime:/etc/localtime:ro --restart=always --net=host homeassistant/home-assistant
+
+docker exec -it home-assistant bash
+
+pip uninstall enum34

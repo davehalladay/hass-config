@@ -71,7 +71,6 @@ camera:
     password: !secret armcrest_password
 
 device_tracker:
-  - platform: owntracks
   - platform: netgear
     host: !secret netgear_host
     username: !secret netgear_user
