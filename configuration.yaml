@@ -64,11 +64,15 @@ sun:
 # History logging with InfluxDB
 influxdb:
 
-camera:
-  - platform: amcrest
-    host: 192.168.15.190
+amcrest:
+  - host: 192.168.15.190
     username: admin
     password: !secret armcrest_password
+    sensors:
+      - motion_detector
+
+camera:
+  - platform: amcrest
 
 device_tracker:
   - platform: netgear
@@ -149,6 +153,7 @@ sensor:
     username: !secret usps_username
     password: !secret usps_password
     name: usps_package
+  -platform: amcrest
 
 
 # Test Garage control
