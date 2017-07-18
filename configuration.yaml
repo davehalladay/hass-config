@@ -23,7 +23,6 @@ updater:
 
 # database for history
 recorder:
-  purge_days: 30
 
 # Discover some devices automatically
 discovery:
@@ -35,15 +34,6 @@ conversation:
 
 # Enables support for tracking state changes over time.
 history:
-  exclude:
-    entities:
-      - sensor.disk_use_
-      - sensor.last_boot
-      - sensor.pihole_ads_percentage_blocked_today
-      - sensor.pihole_dns_queries_today
-      - sensor.ram_use
-      - sensor.since_last_boot
-      - sun.sun
 
 # View all events in a logbook
 logbook:
