@@ -24,7 +24,6 @@ updater:
 # database for history
 recorder:
   purge_days: 30
-  db_url: !secret db_url
 
 # Discover some devices automatically
 discovery:
