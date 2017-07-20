@@ -23,6 +23,7 @@ updater:
 
 # database for history
 recorder:
+  db_url: !secret db_url
 
 # Discover some devices automatically
 discovery:
@@ -37,21 +38,9 @@ history:
 
 # View all events in a logbook
 logbook:
-  exclude:
-    entities:
-      - sensor.disk_use_
-      - sensor.last_boot
-      - sensor.pihole_ads_percentage_blocked_today
-      - sensor.pihole_dns_queries_today
-      - sensor.ram_use
-      - sensor.since_last_boot
-      - sun.sun
 
 # Track the sun
 sun:
-
-# History logging with InfluxDB
-influxdb:
 
 amcrest:
   - host: 192.168.15.190
