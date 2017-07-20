@@ -190,7 +190,7 @@ automation:
         seconds: 5
     condition:
       condition: state
-      entity_id: group.all_devices
+      entity_id: group.family
       state: 'not_home'
     action:
       - service: notify.halladay_bot
@@ -199,7 +199,7 @@ automation:
   - alias: Notify David if garage is left open
     trigger:
       platform: state
-      entity_id: group.all_devices
+      entity_id: group.family
       from: 'home'
       to: 'not_home'
     condition:
