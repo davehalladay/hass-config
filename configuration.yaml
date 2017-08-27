@@ -135,10 +135,10 @@ sensor:
       - type: processor_use
       - type: last_boot
       - type: since_last_boot
-  - platform: usps
-    username: !secret usps_username
-    password: !secret usps_password
-    name: usps_package
+
+usps:
+  username: !secret usps_username
+  password: !secret usps_password
 
 
 # Test Garage control
@@ -187,7 +187,7 @@ automation:
       for:
         hours: 0
         minutes: 0
-        seconds: 5
+        seconds: 30
     condition:
       condition: state
       entity_id: group.family
