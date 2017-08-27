@@ -80,6 +80,6 @@ device_monitor:
 
 deliveries:
   name: Deliveries
-    entities:
-      - sensor.usps_mail
-      - sensor.usps_packages
+  entities:
+    - sensor.usps_mail
+    - sensor.usps_packages
