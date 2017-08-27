@@ -66,12 +66,6 @@ sun.sun:
 sensor.pihole:
   hidden: true
 
-sensor.usps_package_packages:
-  hidden: true
-
-sensor.usps_package_mail:
-  hidden: true
-
 binary_sensor.david_meeting:
   hidden: true
 
