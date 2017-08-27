@@ -77,7 +77,12 @@ device_monitor:
   name: Devices
   entities:
     - sensor.printer_status
+
+delivery_status:
+  name: Delivery Status
+  entities:
     - sensor.usps_mail
+    - sensor.usps_packages
 
 # deliveries:
 #   name: Deliveries

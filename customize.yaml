@@ -77,3 +77,9 @@ device_tracker.canone3a1e9:
 
 sensor.amcrest_camera_motion_detected:
   hidden: true
+
+sensor.usps_mail:
+  friendly_name: Mail Today
+
+sensor.usps_packages:
+  friendly_name: USPS Packages
