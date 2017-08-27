@@ -173,6 +173,15 @@ wemo:
   static:
     - 192.168.15.155
 
+amcrest:
+  - host: 192.168.15.190
+    username: admin
+    password: !secret armcrest_password
+    resolution: low
+    stream_source: snapshot
+    sensors:
+      - motion_detector
+
 google:
   client_id: !secret google_client_id
   client_secret: !secret google_client_secret
