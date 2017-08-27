@@ -83,9 +83,3 @@ delivery_status:
   entities:
     - sensor.usps_mail
     - sensor.usps_packages
-
-# deliveries:
-#   name: Deliveries
-#   entities:
-#     - sensor.usps_mail
-#     - sensor.usps_packages

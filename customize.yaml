@@ -83,3 +83,6 @@ sensor.usps_mail:
 
 sensor.usps_packages:
   friendly_name: USPS Packages
+
+sensor.garage_motion_detected:
+  hidden: true
