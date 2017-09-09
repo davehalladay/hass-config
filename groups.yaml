@@ -46,6 +46,9 @@ weather_darksky:
     - sensor.dark_sky_precip
     - sensor.dark_sky_precip_probability
     - sensor.dark_sky_wind_speed
+    - sensor.us_air_pollution_level
+    - sensor.us_air_quality_index
+    - sensor.us_main_pollutant
 
 network:
   name: Network
