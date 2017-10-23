@@ -70,11 +70,11 @@ internet:
 server_monitor:
   name: Server Status
   entities:
-    - sensor.cpu_use
-    - sensor.disk_use_
+    - sensor.cpu_used
+    - sensor.disk_used_
     - sensor.last_boot
     - sensor.since_last_boot
-    - sensor.ram_use
+    - sensor.ram_used
 
 device_monitor:
   name: Devices
