@@ -32,6 +32,7 @@ environment:
   entities:
     - sun.sun
     - group.weather_darksky
+    - camera.weather_radar
 
 weather_darksky:
   name: Weather Info
