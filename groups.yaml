@@ -81,6 +81,7 @@ device_monitor:
   name: Devices
   entities:
     - sensor.printer_status
+    - sensor.circle_status
 
 delivery_status:
   name: Delivery Status
