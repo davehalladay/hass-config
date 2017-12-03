@@ -12,7 +12,7 @@ family:
   view: no
   entities:
     - device_tracker.david_david_phone
-    - device_tracker.android1a59bea43fd717b5
+    - device_tracker.iphone_4
 
 bedroom:
   name: Bedroom
