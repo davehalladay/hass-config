@@ -68,7 +68,8 @@ device_tracker:
     port: !secret netgear_port
     interval_seconds: 30
     consider_home: 60
-    track_new_devices: no
+    new_device_defaults:
+      track_new_devices: False
 
 ifttt:
   key: !secret ifttt_key
