@@ -92,6 +92,7 @@ climate:
     username: !secret honeywell_user
     password: !secret honeywell_pw
     scan_interval: 600
+    region: us
 
 sensor:
   - platform: darksky
