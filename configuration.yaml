@@ -87,6 +87,12 @@ google_assistant:
   client_id: !secret ga_client_id
   access_token: !secret ga_access_token
 
+climate:
+  - platform: honeywell
+    username: !secret honeywell_user
+    password: !secret honeywell_pw
+    scan_interval: 600
+
 sensor:
   - platform: darksky
     api_key: !secret dark_sky_key
