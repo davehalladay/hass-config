@@ -87,6 +87,10 @@ google_assistant:
   client_id: !secret ga_client_id
   access_token: !secret ga_access_token
 
+lyric:
+  client_id: !secret honeywell_key
+  client_secret: !secret honeywell_secret
+
 sensor:
   - platform: darksky
     api_key: !secret dark_sky_key
