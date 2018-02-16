@@ -139,6 +139,8 @@ sensor:
           Unknown
         {% endif %}"
         friendly_name: Circle
+      pollen_rating_today:
+        value_template: "{states.sensor.allergy_index_today.attributes.rating}"
 
   - platform: speedtest
     minute:
