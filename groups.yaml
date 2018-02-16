@@ -50,6 +50,8 @@ weather_darksky:
     - sensor.us_air_pollution_level
     - sensor.us_air_quality_index
     - sensor.us_main_pollutant
+    - sensor.pollen_rating_today
+    - sensor.pollen_today_source
 
 network:
   name: Network

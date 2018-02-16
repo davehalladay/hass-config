@@ -92,3 +92,15 @@ sensor.garage_motion_detected:
 
 device_tracker.circle:
   hidden: true
+
+sensor.allergy_index_today:
+  hidden: true
+
+sensor.allergy_index_tomorrow:
+  hidden: true
+
+sensor.pollen_rating_today:
+  icon: mdi:flower
+
+sensor.pollen_today_source:
+  icon: mdi:flower

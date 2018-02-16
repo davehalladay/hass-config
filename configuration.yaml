@@ -141,6 +141,10 @@ sensor:
         friendly_name: Circle
       pollen_rating_today:
         value_template: "{{ states.sensor.allergy_index_today.attributes.rating}}"
+        friendly_name: Pollen Level Today
+      pollen_today_source:
+        value_template: "{{ states.sensor.allergy_index_today.attributes.primary_allergen_name}}"
+        friendly_name: Pollen Primary Source
 
   - platform: speedtest
     minute:
