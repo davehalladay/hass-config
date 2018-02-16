@@ -160,6 +160,11 @@ sensor:
     api_key: !secret airvisual_api_key
     monitored_conditions:
       - us
+  - platform: pollen
+    zip_code: !secret zip_code
+    monitored_conditions:
+     - allergy_index_today
+     - allergy_index_tomorrow
 
 usps:
   username: !secret usps_username
