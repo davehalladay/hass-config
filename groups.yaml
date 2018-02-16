@@ -85,8 +85,8 @@ device_monitor:
     - sensor.printer_status
     - sensor.circle_status
 
-delivery_status:
-  name: Delivery Status
-  entities:
-    - sensor.usps_mail
-    - sensor.usps_packages
+# delivery_status:
+#   name: Delivery Status
+#   entities:
+#     - sensor.usps_mail
+#     - sensor.usps_packages

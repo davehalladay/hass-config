@@ -171,10 +171,10 @@ sensor:
     monitored_conditions:
      - allergy_index_today
      - allergy_index_tomorrow
-
-usps:
-  username: !secret usps_username
-  password: !secret usps_password
+# 
+# usps:
+#   username: !secret usps_username
+#   password: !secret usps_password
 
 
 # Test Garage control
