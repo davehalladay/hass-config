@@ -23,7 +23,7 @@ updater:
 
 # database for history
 recorder:
-  db_url: !secret db_url
+  # db_url: !secret db_url
   exclude:
     entities:
       - sensor.ram_use
@@ -171,7 +171,7 @@ sensor:
     monitored_conditions:
      - allergy_index_today
      - allergy_index_tomorrow
-# 
+#
 # usps:
 #   username: !secret usps_username
 #   password: !secret usps_password
