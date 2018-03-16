@@ -261,5 +261,22 @@ automation:
       - service: notify.halladay_bot
         data:
           message: 'The garage has been left open!'
-
+  - alias: Toggle Office Sign On for Meeting
+    trigger:
+      platform: state
+      entity_id: sensor.david_meeting_status
+      from: 'Free'
+      to: 'In Meeting'
+    action:
+      - service: switch.turn_on
+        entity_id: switch.office_sign
+  - alias: Toggle Office Sign Off for Free
+    trigger:
+      platform: state
+      entity_id: sensor.david_meeting_status
+      from: 'In Meeting'
+      to: 'Free'
+    action:
+      - service: switch.turn_off
+        entity_id: switch.office_sign
 group: !include groups.yaml

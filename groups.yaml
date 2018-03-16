@@ -25,6 +25,7 @@ office:
   view: no
   entities:
     - sensor.david_meeting_status
+    - switch.office_sign
 
 environment:
   view: yes
