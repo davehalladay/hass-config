@@ -48,9 +48,9 @@ weather_darksky:
     - sensor.dark_sky_precip
     - sensor.dark_sky_precip_probability
     - sensor.dark_sky_wind_speed
-    - sensor.us_air_pollution_level_2
-    - sensor.us_air_quality_index_2
-    - sensor.us_main_pollutant_2
+    - sensor.us_air_pollution_level_3
+    - sensor.us_air_quality_index_3
+    - sensor.us_main_pollutant_3
     - sensor.pollen_rating_today
     - sensor.pollen_today_source
 
