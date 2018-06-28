@@ -87,9 +87,10 @@ google_assistant:
   client_id: !secret ga_client_id
   access_token: !secret ga_access_token
 
-lyric:
-  client_id: !secret honeywell_key
-  client_secret: !secret honeywell_secret
+# no longer have this thermostat
+# lyric:
+#   client_id: !secret honeywell_key
+#   client_secret: !secret honeywell_secret
 
 sensor:
   - platform: darksky
@@ -143,7 +144,7 @@ sensor:
         value_template: "{{ states.sensor.allergy_index_today.attributes.rating}}"
         friendly_name: Pollen Level Today
       pollen_today_source:
-        value_template: "{{ states.sensor.allergy_index_today.attributes.primary_allergen_name}}"
+        value_template: "{{ states.sensor.allergy_index_today.attributes.primary_allergen_name_1}}"
         friendly_name: Pollen Primary Source
 
   - platform: speedtest
