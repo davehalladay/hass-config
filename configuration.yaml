@@ -94,6 +94,10 @@ google_assistant:
 #   client_id: !secret honeywell_key
 #   client_secret: !secret honeywell_secret
 
+cast:
+  media_player:
+  - host: 192.168.15.205
+
 sensor:
   - platform: darksky
     api_key: !secret dark_sky_key
