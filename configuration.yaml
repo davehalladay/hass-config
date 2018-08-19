@@ -13,15 +13,13 @@ homeassistant:
   customize: !include customize.yaml
   auth_providers:
     - type: homeassistant
+    - type: legacy_api_password
 
 # Enables the frontend
 frontend:
 
-auth:
-  access_token: !secret access_token
-
 http:
-  # api_password: !secret hass_api_password
+  api_password: !secret hass_api_password
   ip_ban_enabled: True
   login_attempts_threshold: 5
 
