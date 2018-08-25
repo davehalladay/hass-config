@@ -220,6 +220,10 @@ wemo:
     - 192.168.15.155
     - 192.168.15.156
 
+switch:
+  - platform: tplink
+    host: 192.168.15.206
+
 amcrest:
   - host: 192.168.15.190
     name: Garage
