@@ -100,6 +100,7 @@ google_assistant:
 cast:
   media_player:
   - host: 192.168.15.205
+  - host: 192.168.15.207
 
 sensor:
   - platform: darksky
