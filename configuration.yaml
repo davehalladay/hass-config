@@ -321,4 +321,12 @@ automation:
     action:
       - service: switch.turn_off
         entity_id: switch.office_sign
+  - alias: Launch Alerts
+    trigger:
+      - platform: template
+        value_template: '{{ (now().strftime("%s") | int + 600) == (states.sensor.spacex.state | int) }}'
+    action:
+      - service: notify.halladay_bot
+        data:
+          message: 'SpaceX launch in 10 minutes!'
 group: !include groups.yaml
