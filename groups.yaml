@@ -94,6 +94,7 @@ spacex:
   - sensor.spacex_next_launch_day
   - sensor.spacex_next_launch_time
   - sensor.spacex_next_launch_site
+  - automation.launch_alerts
 # delivery_status:
 #   name: Delivery Status
 #   entities:
