@@ -86,6 +86,14 @@ device_monitor:
     - sensor.printer_status
     - sensor.circle_status
 
+spacex:
+  name: SpaceX
+  entities:
+  - sensor.spacex_next_rocket
+  - sensor.spacex_next_mission_name
+  - sensor.spacex_next_launch_day
+  - sensor.spacex_next_launch_time
+  - sensor.spacex_next_launch_site
 # delivery_status:
 #   name: Delivery Status
 #   entities:
