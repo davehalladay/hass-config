@@ -193,8 +193,8 @@ sensor:
   - platform: template
     sensors:
       spacex_next_launch_day:
-        friendly_name: 'Next Launch Date'
-        value_template: '{{ states.sensor.spacex.state | int | timestamp_custom("%d.%m.%Y")}}'
+        friendly_name: 'Launch Date'
+        value_template: '{{ states.sensor.spacex.state | int | timestamp_custom("%m/%d/%Y")}}'
       spacex_next_launch_time:
         friendly_name: 'Launch Time'
         value_template: '{{ states.sensor.spacex.state | int | timestamp_custom("%H:%M")}}'
@@ -204,7 +204,7 @@ sensor:
         value_template: '{{ states.sensor.spacex.attributes["rocket"]["rocket_name"] }}'
       spacex_next_launch_site:
         friendly_name: 'Launch Site'
-        value_template: '{{ states.sensor.spacex.attributes["launch_site"]["site_name"] }}'
+        value_template: '{{ states.sensor.spacex.attributes["launch_site"]["site_name_long"] }}'
       spacex_next_mission_name:
         friendly_name: 'Mission Name'
         value_template: '{{ states.sensor.spacex.attributes["mission_name"] }}'
