@@ -115,3 +115,5 @@ sensor.spacex_next_launch_site:
   icon: mdi:map-marker-radius
 sensor.spacex_next_mission_name:
   icon: mdi:information-outline
+sensor.spacex:
+  hidden: true
