@@ -260,6 +260,14 @@ amcrest:
     stream_source: snapshot
     sensors:
       - motion_detector
+  - host: 192.168.15.208
+    name: Playroom
+    username: admin
+    password: !secret armcrest_password
+    resolution: low
+    stream_source: snapshot
+    sensors:
+      - motion_detector
 
 google:
   client_id: !secret google_client_id
