@@ -89,6 +89,9 @@ sensor.usps_packages:
 
 sensor.garage_motion_detected:
   hidden: true
+  
+sensor.playroom_motion_detected:
+  hidden: true
 
 device_tracker.circle:
   hidden: true
