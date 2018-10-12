@@ -87,10 +87,10 @@ binary_sensor:
     payload_on: True
     payload_off: False
 
-google_assistant:
-  project_id: !secret ga_project_id
-  client_id: !secret ga_client_id
-  access_token: !secret ga_access_token
+#google_assistant:
+#  project_id: !secret ga_project_id
+#  client_id: !secret ga_client_id
+#  access_token: !secret ga_access_token
 
 # no longer have this thermostat
 # lyric:
