@@ -11,8 +11,8 @@ family:
   name: Family
   view: no
   entities:
-    - device_tracker.david_david_phone
-    - device_tracker.iphone_4
+    - device_tracker.honor_8
+    - device_tracker.sarahsiphone
 
 bedroom:
   name: Bedroom
