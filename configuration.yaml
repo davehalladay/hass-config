@@ -122,9 +122,6 @@ sensor:
       - dns_queries_today
   - platform: template
     sensors:
-      garage_door_status:
-        value_template: '{{ states.cover.door_control.state }}'
-        friendly_name: 'Door Status'
       david_meeting_status:
         value_template: '{% if is_state("binary_sensor.david_meeting", "on") %}In Meeting{% else %}Free{% endif %}'
         friendly_name: David Status
@@ -156,6 +153,16 @@ sensor:
       pollen_today_source:
         value_template: "{{ states.sensor.allergy_index_today.attributes.primary_allergen_name_1}}"
         friendly_name: Pollen Primary Source
+      garage_door_status:
+        friendly_name: 'State of the door'
+        value_template: '{{ states.cover.garage_door.state }}'
+      garage_door_time_in_state:
+        friendly_name: 'Since'
+        value_template: '{{ states.cover.garage_door.attributes.time_in_state }}'
+      garage_door_wifi_signal_strength:
+        friendly_name: 'WiFi strength'
+        value_template: '{{ states.cover.garage_door.attributes.wifi_signal_strength }}'
+        unit_of_measurement: 'dB'
 
   - platform: speedtest
     minute:
@@ -216,14 +223,20 @@ sensor:
 
 # Test Garage control
 cover:
-- platform: command_line
-  covers:
-    garage_door:
-      command_open: curl --data '' 192.168.15.100:8888/api
-      command_close: curl --data '' 192.168.15.100:8888/api
-      command_stop: curl --data '' 192.168.15.100:8888/api
-      command_state: curl 192.168.15.100:8888/api
-      friendly_name: Door Control
+# - platform: command_line
+#   covers:
+#     garage_door:
+#       command_open: curl --data '' 192.168.15.100:8888/api
+#       command_close: curl --data '' 192.168.15.100:8888/api
+#       command_stop: curl --data '' 192.168.15.100:8888/api
+#       command_state: curl 192.168.15.100:8888/api
+#       friendly_name: Door Control
+  - platform: garadget
+    covers:
+      47004d001151353432393433:
+        username: !secret garadget_username
+        password: !secret garadget_password
+        name: Garadge Door
 
 telegram_bot:
   platform: polling
