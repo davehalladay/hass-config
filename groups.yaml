@@ -1,11 +1,12 @@
 # Groups
 
-garage_opener:
-  name: Garage
-  view: no
+garage_door:
+  name: Garage door
   entities:
-    - cover.door_control
+    - cover.garage_door
     - sensor.garage_door_status
+    - sensor.garage_door_time_in_state
+    - sensor.garage_door_wifi_signal_strength
 
 family:
   name: Family

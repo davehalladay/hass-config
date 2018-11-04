@@ -236,7 +236,7 @@ cover:
       47004d001151353432393433:
         username: !secret garadget_username
         password: !secret garadget_password
-        name: Garadge Door
+        name: Garage Door
 
 telegram_bot:
   platform: polling

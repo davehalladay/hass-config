@@ -49,13 +49,10 @@ sensor.speedtest_upload:
   friendly_name: Upload Speed
   icon: mdi:upload
 
-cover.garage_door:
-  friendly_name: Door Control
-  icon: mdi:glassdoor
-
-sensor.garage_door_status:
-  friendly_name: Door Status
-  icon: mdi:reload
+sensor.garage_door_time_in_state:
+    icon: mdi:timer-sand
+sensor.garage_door_wifi_signal_strength:
+    icon: mdi:wifi
 
 sensor.david_meeting_status:
   icon: mdi:worker
@@ -89,7 +86,7 @@ sensor.usps_packages:
 
 sensor.garage_motion_detected:
   hidden: true
-  
+
 sensor.playroom_motion_detected:
   hidden: true
 
