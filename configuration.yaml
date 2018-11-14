@@ -84,7 +84,7 @@ ifttt:
 
 binary_sensor:
   - platform: command_line
-    command: curl http://192.168.15.100:8888/api/cal
+    command: curl http://localhost:5000/api/calendarStatus
     name: David Meeting
     device_class: occupancy
     payload_on: True
