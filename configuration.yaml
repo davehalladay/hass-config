@@ -87,8 +87,8 @@ binary_sensor:
     command: curl http://localhost:5000/api/calendarStatus
     name: David Meeting
     device_class: occupancy
-    payload_on: True
-    payload_off: False
+    payload_on: true
+    payload_off: false
 
 #google_assistant:
 #  project_id: !secret ga_project_id
