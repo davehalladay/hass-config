@@ -83,12 +83,12 @@ ifttt:
   key: !secret ifttt_key
 
 binary_sensor:
-  - platform: command_line
-    command: curl http://localhost:5000/api/calendarStatus
+  - platform: rest
+    resource: http://localhost:5000/api/calendarStatus
+    method: GET
     name: David Meeting
     device_class: occupancy
-    payload_on: true
-    payload_off: false
+    value_template: {{value.on}}
 
 #google_assistant:
 #  project_id: !secret ga_project_id
