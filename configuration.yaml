@@ -88,7 +88,6 @@ binary_sensor:
     method: GET
     name: David Meeting
     device_class: occupancy
-    value_template: {{value.on}}
 
 #google_assistant:
 #  project_id: !secret ga_project_id
