@@ -54,9 +54,6 @@ sensor.garage_door_time_in_state:
 sensor.garage_door_wifi_signal_strength:
     icon: mdi:wifi
 
-sensor.david_meeting_status:
-  icon: mdi:worker
-
 sun.sun:
   hidden: true
 

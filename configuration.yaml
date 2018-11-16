@@ -128,6 +128,12 @@ sensor:
       david_meeting_status:
         value_template: '{% if is_state("binary_sensor.david_meeting", "on") %}In Meeting{% else %}Free{% endif %}'
         friendly_name: David Status
+        icon_template: >-
+          {% if is_state('binary_sensor.david_meeting', 'on') %}
+            mdi:phone-in-talk
+          {% else %}
+            mdi:phone-hangup
+          {% endif %}
       printer_status:
         value_template: "{% if states.device_tracker.canone3a1e9 %}
         {% if is_state('device_tracker.canone3a1e9', 'home') %}
@@ -166,20 +172,6 @@ sensor:
         friendly_name: 'WiFi strength'
         value_template: '{{ states.cover.garage_door.attributes.wifi_signal_strength }}'
         unit_of_measurement: 'dB'
-      david_meeting_status:
-        friendly_name: David Status
-        value_template: >-
-          {% if is_state('binary_sensor.david_meeting', 'on') %}
-            on
-          {% else %}
-            off
-          {% endif %}
-        icon_template: >-
-          {% if is_state('binary_sensor.david_meeting', 'on') %}
-            mdi:phone-in-talk
-          {% else %}
-            mdi:phone-hangup
-          {% endif %}
 
   - platform: speedtest
     minute:
