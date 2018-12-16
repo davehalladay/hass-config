@@ -111,8 +111,8 @@ sensor:
     monitored_conditions:
       - summary
       - temperature
-      - temperature_max
-      - temperature_min
+      - temperature_high
+      - temperature_low
       - apparent_temperature
       - wind_speed
       - humidity
@@ -188,7 +188,6 @@ sensor:
       - type: memory_use_percent
       - type: processor_use
       - type: last_boot
-      - type: since_last_boot
   - platform: airvisual
     api_key: !secret airvisual_api_key
     monitored_conditions:
