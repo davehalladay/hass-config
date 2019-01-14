@@ -69,14 +69,14 @@ internet:
     - sensor.speedtest_download
     - sensor.speedtest_upload
     - sensor.speedtest_ping
-    - sensor.pihole_dns_queries_today
-    - sensor.pihole_ads_percentage_blocked_today
+    - sensor.pi_hole_dns_queries_today
+    - sensor.pi_hole_ads_percentage_blocked_today
 
 server_monitor:
   name: Server Status
   entities:
     - sensor.processor_use
-    - sensor.disk_use_percent_
+    - sensor.disk_use_percent
     - sensor.last_boot
     - sensor.since_last_boot
     - sensor.memory_use_percent
