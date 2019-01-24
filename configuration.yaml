@@ -28,15 +28,7 @@ updater:
 
 # database for history
 recorder:
-  # db_url: !secret db_url
-  exclude:
-    entities:
-      - sensor.ram_use
-      - sensor.since_last_boot
-      - sensor.last_boot
-      - sensor.disk_use_
-      - sensor.cpu_use
-      - sun.sun
+
 
 # Discover some devices automatically
 discovery:
@@ -51,9 +43,7 @@ history:
 
 # View all events in a logbook
 logbook:
-  exclude:
-    entities:
-      - sensor.garage_door_time_in_state
+
 
 # Track the sun
 sun:
