@@ -259,8 +259,7 @@ wemo:
     - 192.168.15.156
 roku:
   - host: 192.168.15.210
-  - host: 192.168.15.211
-  
+
 switch:
   - platform: tplink
     host: 192.168.15.206
