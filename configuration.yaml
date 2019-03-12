@@ -263,11 +263,16 @@ roku:
   - host: 192.168.15.210
   - host: 192.168.15.211
 
-switch:
-  - platform: tplink
-    host: 192.168.15.206
-  - platform: tplink
-    host: 192.168.15.209
+tplink:
+  discovery: false
+  switch:
+    - host: 192.168.15.206
+    - host: 192.168.15.209
+# switch:
+#   - platform: tplink
+#     host: 192.168.15.206
+#   - platform: tplink
+#     host: 192.168.15.209
 
 amcrest:
   - host: 192.168.15.190
