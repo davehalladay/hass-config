@@ -164,14 +164,14 @@ sensor:
         value_template: '{{ states.cover.garage_door.attributes.wifi_signal_strength }}'
         unit_of_measurement: 'dB'
 
-  - platform: speedtest
-    minute:
-      - 0
-      - 30
-    monitored_conditions:
-      - ping
-      - download
-      - upload
+  # - platform: speedtest
+  #   minute:
+  #     - 0
+  #     - 30
+  #   monitored_conditions:
+  #     - ping
+  #     - download
+  #     - upload
   - platform: systemmonitor
     resources:
       - type: disk_use_percent
@@ -273,6 +273,14 @@ tplink:
 #     host: 192.168.15.206
 #   - platform: tplink
 #     host: 192.168.15.209
+
+speedtestdotnet:
+  scan_interval:
+    minutes: 30
+  monitored_conditions:
+    - ping
+    - download
+    - upload
 
 amcrest:
   - host: 192.168.15.190
