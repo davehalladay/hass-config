@@ -269,6 +269,7 @@ tplink:
     - host: 192.168.15.206
     - host: 192.168.15.209
     - host: 192.168.15.213
+    
 # switch:
 #   - platform: tplink
 #     host: 192.168.15.206
