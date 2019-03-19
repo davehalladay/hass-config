@@ -96,7 +96,7 @@ cast:
   media_player:
   - host: 192.168.15.205
   - host: 192.168.15.207
-  - host: 192.168.15.211
+  - host: 192.168.15.212
 
 sensor:
   - platform: darksky
@@ -268,6 +268,7 @@ tplink:
   switch:
     - host: 192.168.15.206
     - host: 192.168.15.209
+    - host: 192.168.15.213
 # switch:
 #   - platform: tplink
 #     host: 192.168.15.206
