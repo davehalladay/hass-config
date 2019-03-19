@@ -269,7 +269,7 @@ tplink:
     - host: 192.168.15.206
     - host: 192.168.15.209
     - host: 192.168.15.213
-    
+
 # switch:
 #   - platform: tplink
 #     host: 192.168.15.206
@@ -370,4 +370,19 @@ automation:
       - service: notify.halladay_bot
         data:
           message: 'SpaceX launch in 10 minutes!'
+  - alias: Front Lights On
+    trigger:
+      platform: sun
+      event: sunset
+    action:
+      service: switch.turn_on
+      entity_id: switch.front_door_light
+  - alias: Front Lights Off
+    trigger:
+      platform: sun
+      event: sunrise
+    action:
+      service: switch.turn_off
+      entity_id: switch.front_door_light
+
 group: !include groups.yaml
