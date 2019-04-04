@@ -43,7 +43,7 @@ history:
 
 # View all events in a logbook
 logbook:
-
+config:
 
 # Track the sun
 sun:
