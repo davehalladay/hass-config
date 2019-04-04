@@ -33,7 +33,6 @@ system_health:
 discovery:
   ignore:
     - netgear_router
-    - roku
 
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
@@ -258,8 +257,6 @@ wemo:
   static:
     - 192.168.15.155
     - 192.168.15.156
-roku:
-  host: 192.168.15.210
 
 tplink:
   discovery: false
