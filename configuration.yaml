@@ -285,7 +285,7 @@ amcrest:
     username: admin
     password: !secret armcrest_password
     resolution: low
-    stream_source: snapshot
+    stream_source: rtsp
     sensors:
       - motion_detector
   - host: 192.168.15.208
@@ -293,7 +293,7 @@ amcrest:
     username: admin
     password: !secret armcrest_password
     resolution: low
-    stream_source: snapshot
+    stream_source: rtsp
     sensors:
       - motion_detector
 
