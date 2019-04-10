@@ -284,7 +284,7 @@ amcrest:
     name: Garage
     username: admin
     password: !secret armcrest_password
-    resolution: low
+    resolution: high
     stream_source: rtsp
     sensors:
       - motion_detector
@@ -292,7 +292,7 @@ amcrest:
     name: Playroom
     username: admin
     password: !secret armcrest_password
-    resolution: low
+    resolution: high
     stream_source: rtsp
     sensors:
       - motion_detector
