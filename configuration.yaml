@@ -31,7 +31,6 @@ config:
 sun:
 updater:
 recorder:
-stream:
 
 system_health:
 device_tracker:
