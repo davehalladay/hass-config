@@ -14,49 +14,26 @@ homeassistant:
   auth_providers:
     - type: homeassistant
 
-# Enables the frontend
 frontend:
 
 http:
   ip_ban_enabled: True
   login_attempts_threshold: 5
 
-# Checks for available updates
-updater:
-
-# database for history
-recorder:
-
-system_health:
-
-# Discover some devices automatically
 discovery:
   ignore:
     - netgear_router
 
-# Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
-
-# Enables support for tracking state changes over time.
 history:
-
-# View all events in a logbook
 logbook:
 config:
-
-# Track the sun
 sun:
+updater:
+recorder:
+stream:
 
-# amcrest:
-#   - host: 192.168.15.190
-#     username: admin
-#     password: !secret armcrest_password
-#     sensors:
-#       - motion_detector
-#
-# camera:
-#   - platform: amcrest
-
+system_health:
 device_tracker:
   - platform: netgear
     host: !secret netgear_host
@@ -78,16 +55,6 @@ binary_sensor:
     name: David Meeting
     device_class: occupancy
     value_template: '{{ value_json.state.open }}'
-
-#google_assistant:
-#  project_id: !secret ga_project_id
-#  client_id: !secret ga_client_id
-#  access_token: !secret ga_access_token
-
-# no longer have this thermostat
-# lyric:
-#   client_id: !secret honeywell_key
-#   client_secret: !secret honeywell_secret
 
 cast:
   media_player:
@@ -163,14 +130,6 @@ sensor:
         value_template: '{{ states.cover.garage_door.attributes.wifi_signal_strength }}'
         unit_of_measurement: 'dB'
 
-  # - platform: speedtest
-  #   minute:
-  #     - 0
-  #     - 30
-  #   monitored_conditions:
-  #     - ping
-  #     - download
-  #     - upload
   - platform: systemmonitor
     resources:
       - type: disk_use_percent
@@ -213,22 +172,8 @@ sensor:
       spacex_next_mission_name:
         friendly_name: 'Mission Name'
         value_template: '{{ states.sensor.spacex.attributes["mission_name"] }}'
-#
-# usps:
-#   username: !secret usps_username
-#   password: !secret usps_password
 
-
-# Test Garage control
 cover:
-# - platform: command_line
-#   covers:
-#     garage_door:
-#       command_open: curl --data '' 192.168.15.100:8888/api
-#       command_close: curl --data '' 192.168.15.100:8888/api
-#       command_stop: curl --data '' 192.168.15.100:8888/api
-#       command_state: curl 192.168.15.100:8888/api
-#       friendly_name: Door Control
   - platform: garadget
     covers:
       47004d001151353432393433:
@@ -264,12 +209,6 @@ tplink:
     - host: 192.168.15.206
     - host: 192.168.15.209
     - host: 192.168.15.213
-
-# switch:
-#   - platform: tplink
-#     host: 192.168.15.206
-#   - platform: tplink
-#     host: 192.168.15.209
 
 speedtestdotnet:
   scan_interval:
