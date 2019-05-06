@@ -207,9 +207,7 @@ snips:
     searchWeatherForecast:
       speech:
         type: plain
-        text: >
-        The weather is currently {{ states('sensor.dark_sky_weather_temperature') | round(0) }}
-        degrees outside and {{ states('sensor.dark_sky_weather_summary') }}.
+        text: 'The weather is currently {{ states('sensor.dark_sky_weather_temperature') | round(0) }} degrees outside and {{ states('sensor.dark_sky_weather_summary') }}.'
 
 tplink:
   discovery: false
