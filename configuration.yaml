@@ -208,6 +208,24 @@ intent_script:
     speech:
       type: plain
       text: "The weather is currently {{ states('sensor.dark_sky_temperature') | round(0) }} degrees outside and {{ states('sensor.dark_sky_summary') }}."
+intent_script:
+  closeGarageDoor:
+    speech:
+      type: plain
+      text: "OK, closing the garage door now."
+    action:
+      - service: cover.close_cover
+        data:
+          entity_id: cover.garage_door
+intent_script:
+  openGarageDoor:
+    speech:
+      type: plain
+      text: "OK, opening the garage door now."
+    action:
+      - service: cover.open_cover
+        data:
+          entity_id: cover.garage_door
 
 tplink:
   discovery: false
