@@ -203,11 +203,13 @@ wemo:
     - 192.168.15.156
 
 snips:
+  
 intent_script:
   searchWeatherForecast:
     speech:
       type: plain
       text: "The weather is currently {{ states('sensor.dark_sky_temperature') | round(0) }} degrees outside and {{ states('sensor.dark_sky_summary') }}."
+
 intent_script:
   closeGarageDoor:
     speech:
@@ -217,6 +219,7 @@ intent_script:
       - service: cover.close_cover
         data:
           entity_id: cover.garage_door
+
 intent_script:
   openGarageDoor:
     speech:
