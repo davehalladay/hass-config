@@ -212,7 +212,7 @@ intent_script:
       text: "OK, closing the garage door now."
     action:
       - service: cover.close_cover
-        data:
+        data_template:
           entity_id: cover.garage_door
 intent_script:
   openGarageDoor:
@@ -221,7 +221,7 @@ intent_script:
       text: "OK, opening the garage door now."
     action:
       - service: cover.open_cover
-        data:
+        data_template:
           entity_id: cover.garage_door
 intent_script:
   searchWeatherForecast:
