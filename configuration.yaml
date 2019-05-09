@@ -214,7 +214,7 @@ intent_script:
       - service: cover.close_cover
         data:
           entity_id: cover.garage_door
-
+intent_script:
   openGarageDoor:
     speech:
       type: plain
@@ -223,12 +223,11 @@ intent_script:
       - service: cover.open_cover
         data:
           entity_id: cover.garage_door
+intent_script:
   searchWeatherForecast:
     speech:
       type: plain
       text: "The weather is currently {{ states('sensor.dark_sky_temperature') | round(0) }} degrees outside and {{ states('sensor.dark_sky_summary') }}."
-
-
 tplink:
   discovery: false
   switch:
