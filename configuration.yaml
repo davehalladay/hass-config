@@ -252,7 +252,7 @@ amcrest:
     password: !secret armcrest_password
     resolution: high
     stream_source: rtsp
-    sensors:
+    binary_sensors:
       - motion_detector
   - host: 192.168.15.208
     name: Playroom
@@ -260,7 +260,7 @@ amcrest:
     password: !secret armcrest_password
     resolution: high
     stream_source: rtsp
-    sensors:
+    binary_sensors:
       - motion_detector
 
 google:
