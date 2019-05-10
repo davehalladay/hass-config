@@ -226,6 +226,10 @@ intent_script:
     speech:
       type: plain
       text: "The weather is currently {{ states('sensor.dark_sky_temperature') | round(0) }} degrees outside and {{ states('sensor.dark_sky_summary') }}."
+  queryGarageStatus:
+    speech:
+      type: plain
+      text: "The garage door is currently {{ states('cover.garage_door')}}"
 tplink:
   discovery: false
   switch:
