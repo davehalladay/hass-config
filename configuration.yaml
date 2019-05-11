@@ -236,7 +236,7 @@ intent_script:
       text: "OK, paging {{room}}"
     action:
       - service: snips.say
-        data:
+        data_template:
           text: "Someone from the {{site_id}} is requesting you."
           site_id: "{{room}}"
 tplink:
