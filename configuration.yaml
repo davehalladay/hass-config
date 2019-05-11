@@ -235,7 +235,7 @@ intent_script:
       type: plain
       text: "OK, paging {{room}}"
     action:
-      service: snips.say
+      - service: snips.say
         data:
           text: "Someone from the {{site_id}} is requesting you."
           site_id: "room"
