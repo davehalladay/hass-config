@@ -230,6 +230,15 @@ intent_script:
     speech:
       type: plain
       text: "The garage door is currently {{ states('cover.garage_door')}}"
+  pageSnips:
+    speech:
+      type: plain
+      text: "OK, paging {{room}}"
+    action:
+      service: snips.say
+        data:
+          text: "Someone from the {{site_id}} is requesting you."
+          site_id: "room"
 tplink:
   discovery: false
   switch:
