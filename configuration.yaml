@@ -238,7 +238,7 @@ intent_script:
       - service: snips.say
         data:
           text: "Someone from the {{site_id}} is requesting you."
-          site_id: "room"
+          site_id: "{{room}}"
 tplink:
   discovery: false
   switch:
