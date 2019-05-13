@@ -32,6 +32,8 @@ sun:
 updater:
 recorder:
 
+stream:
+
 system_health:
 device_tracker:
   - platform: netgear
@@ -282,6 +284,23 @@ camera:
     still_image_url: !secret weather_radar_url
 
 automation:
+  - alias: Record Garage Video
+    trigger:
+      platform: state
+      entity_id: binary_sensor.garage_motion_detected
+      from: 'off'
+      to: 'on'
+    condition:
+      - condition: state
+        entity_id: input_boolean.security_armed
+        state: 'on'
+    action:
+      service: camera.record
+      data:
+        entity_id: camera.garage
+        filename: '/config/www/garage_stream.mp4'
+        duration: 30
+
   - alias: Notify David if garage is opened
     trigger:
       platform: state
@@ -356,3 +375,9 @@ automation:
       entity_id: switch.front_door_light
 
 group: !include groups.yaml
+
+input_boolean:
+  security_armed:
+    name: Secure Mode
+    initial: off
+    icon: mdi:shield-home
