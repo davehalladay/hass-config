@@ -300,6 +300,22 @@ automation:
         entity_id: camera.garage
         filename: '/config/www/garage_stream.mp4'
         duration: 30
+  - alias: Record Playroom Video
+    trigger:
+      platform: state
+      entity_id: binary_sensor.playroom_motion_detected
+      from: 'off'
+      to: 'on'
+    condition:
+      - condition: state
+        entity_id: input_boolean.security_armed
+        state: 'on'
+    action:
+      service: camera.record
+      data:
+        entity_id: camera.playroom
+        filename: '/config/www/playroom_stream.mp4'
+        duration: 30
 
   - alias: Notify David if garage is opened
     trigger:
