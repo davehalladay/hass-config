@@ -298,7 +298,7 @@ automation:
       service: camera.record
       data:
         entity_id: camera.garage
-        filename: '/config/www/garage_stream_{{now().strftime('%Y%m%d_%H%M%S')}}.mp4'
+        filename: "/config/www/garage_stream_{{now().strftime('%Y%m%d_%H%M%S')}}.mp4"
         duration: 30
   - alias: Record Playroom Video
     trigger:
@@ -314,7 +314,7 @@ automation:
       service: camera.record
       data:
         entity_id: camera.playroom
-        filename: '/config/www/playroom_stream_{{now().strftime('%Y%m%d_%H%M%S')}}.mp4'
+        filename: "/config/www/playroom_stream_{{now().strftime('%Y%m%d_%H%M%S')}}.mp4"
         duration: 30
 
   - alias: Notify David if garage is opened
