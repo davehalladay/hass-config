@@ -14,6 +14,9 @@ family:
   entities:
     - device_tracker.honor_8
     - device_tracker.sarahsiphone
+    - device_tracker.iphone
+    - device_tracker.briannasiphone
+    - device_tracker.ame
 
 bedroom:
   name: Bedroom
