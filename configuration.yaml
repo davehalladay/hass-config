@@ -219,22 +219,6 @@ snips:
 
 
 intent_script:
-  closeGarageDoor:
-    speech:
-      type: plain
-      text: "OK, closing the garage door now."
-    action:
-      - service: cover.close_cover
-        data_template:
-          entity_id: cover.garage_door
-  openGarageDoor:
-    speech:
-      type: plain
-      text: "OK, opening the garage door now."
-    action:
-      - service: cover.open_cover
-        data_template:
-          entity_id: cover.garage_door
   searchWeatherForecast:
     speech:
       type: plain
@@ -252,6 +236,12 @@ intent_script:
         data_template:
           text: "Someone from the {{site_id}} is requesting you."
           site_id: "{{room}}"
+  queryPersonHome:
+    speech:
+      type: plain
+      text: >
+        {% set tracker_name = {{person}} %}
+        '{{state_attr("device_tracker." + tracker_name, "friendly_name")}} is currently {{ states("device_tracker." + tracker_name) }}'
 tplink:
   discovery: false
   switch:
