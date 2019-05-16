@@ -236,10 +236,6 @@ intent_script:
         data_template:
           text: "Someone from the {{site_id}} is requesting you."
           site_id: "{{room}}"
-  queryPersonHome:
-    speech:
-      type: plain
-      text: {{state_attr("device_tracker." + {{person}}, "friendly_name")}} is currently {{ states("device_tracker." + {{person}}) }}
 tplink:
   discovery: false
   switch:
