@@ -239,8 +239,7 @@ intent_script:
   queryPersonHome:
     speech:
       type: plain
-      text: >
-        {{state_attr("device_tracker." + {{person}}, "friendly_name")}} is currently {{ states("device_tracker." + {{person}}) }}
+      text: {{state_attr("device_tracker." + {{person}}, "friendly_name")}} is currently {{ states("device_tracker." + {{person}}) }}
 tplink:
   discovery: false
   switch:
