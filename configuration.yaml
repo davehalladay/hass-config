@@ -240,8 +240,7 @@ intent_script:
     speech:
       type: plain
       text: >
-        {% set tracker_name = {{person}} %}
-        {{state_attr("device_tracker." + tracker_name, "friendly_name")}} is currently {{ states("device_tracker." + tracker_name) }}
+        {{state_attr("device_tracker." + {{person}}, "friendly_name")}} is currently {{ states("device_tracker." + {{person}}) }}
 tplink:
   discovery: false
   switch:
