@@ -236,6 +236,10 @@ intent_script:
         data_template:
           text: "Someone from the {{site_id}} is requesting you."
           site_id: "{{room}}"
+  queryPersonHome:
+    speech:
+      type: plain
+      text: "Test call {{ person }}"
 tplink:
   discovery: false
   switch:
