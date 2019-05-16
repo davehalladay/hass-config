@@ -239,7 +239,7 @@ intent_script:
   queryPersonHome:
     speech:
       type: plain
-      text: "Test call {{ person }}"
+      text: "Test call {{ Person }}"
 tplink:
   discovery: false
   switch:
