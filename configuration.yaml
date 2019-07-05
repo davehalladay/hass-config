@@ -185,6 +185,11 @@ sensor:
       spacex_next_mission_name:
         friendly_name: 'Mission Name'
         value_template: '{{ states.sensor.spacex.attributes["mission_name"] }}'
+  - platform: aqualogic
+    monitored_conditions:
+      - pool_temp
+      - air_temp
+      - status
 
 cover:
   - platform: garadget
@@ -391,6 +396,13 @@ automation:
       entity_id: switch.front_door_light
 
 group: !include groups.yaml
+
+switch:
+  - platform: aqualogic
+    monitored_conditions:
+      - lights
+      - filter
+      - aux_1
 
 input_boolean:
   security_armed:
