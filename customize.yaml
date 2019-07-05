@@ -114,3 +114,13 @@ sensor.spacex_next_mission_name:
   icon: mdi:information-outline
 sensor.spacex:
   hidden: true
+switch.aqualogic_aux_1:
+  friendly_name: Spa Lights
+switch.aqualogic_filter:
+  friendly_name: Pool Filter
+switch.aqualogic_lights:
+  friendly_name: Pool Lights
+sensor.aqualogic_status:
+  friendly_name: Pool Status
+sensor.aqualogic_pool_temperature:
+  friendly_name: Pool Temperature
