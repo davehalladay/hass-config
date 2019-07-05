@@ -57,8 +57,9 @@ device_tracker:
       - 192.168.15.221
     home_interval: 5
 
-ifttt:
-  key: !secret ifttt_key
+aqualogic:
+  host: 192.168.15.222
+  port: 8899
 
 binary_sensor:
   - platform: rest
