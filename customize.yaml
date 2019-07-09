@@ -124,3 +124,5 @@ sensor.aqualogic_status:
   friendly_name: Pool Status
 sensor.aqualogic_pool_temperature:
   friendly_name: Pool Temperature
+sensor.aqualogic_spa_temperature:
+  friendly_name: Spa Temperature
