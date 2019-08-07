@@ -1,0 +1,18 @@
+aqualogic:
+  host: 192.168.15.222
+  port: 8899
+
+sensor:
+  - platform: aqualogic
+    monitored_conditions:
+      - pool_temp
+      - air_temp
+      - status
+      - spa_temp
+
+switch:
+  - platform: aqualogic
+    monitored_conditions:
+      - lights
+      - filter
+      - aux_1
