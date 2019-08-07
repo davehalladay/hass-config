@@ -36,15 +36,6 @@ stream:
 
 system_health:
 device_tracker:
-  # - platform: netgear
-  #   host: !secret netgear_host
-  #   username: !secret netgear_user
-  #   password: !secret netgear_password
-  #   port: !secret netgear_port
-  #   interval_seconds: 30
-  #   consider_home: 60
-  #   new_device_defaults:
-  #     track_new_devices: False
   - platform: nmap_tracker
     hosts:
       - 192.168.15.216
@@ -57,8 +48,9 @@ device_tracker:
       - 192.168.15.221
     home_interval: 5
 
-packages:
-  aqualogic: !include aqualogic.yaml
+aqualogic:
+  host: 192.168.15.222
+  port: 8899
 
 binary_sensor:
   - platform: rest
@@ -184,6 +176,12 @@ sensor:
       spacex_next_mission_name:
         friendly_name: 'Mission Name'
         value_template: '{{ states.sensor.spacex.attributes["mission_name"] }}'
+  - platform: aqualogic
+    monitored_conditions:
+      - pool_temp
+      - air_temp
+      - status
+      - spa_temp
 
 cover:
   - platform: garadget
@@ -388,6 +386,13 @@ automation:
     action:
       service: switch.turn_off
       entity_id: switch.front_door_light
+
+switch:
+  - platform: aqualogic
+    monitored_conditions:
+      - lights
+      - filter
+      - aux_1
 
 group: !include groups.yaml
 
