@@ -12,7 +12,7 @@ family:
   name: Family
   view: no
   entities:
-    - device_tracker.honor_8
+    - device_tracker.dc_08_0f_05_40_c4
     - device_tracker.sarahsiphone
     - device_tracker.iphone
     - device_tracker.briannasiphone
