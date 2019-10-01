@@ -65,6 +65,7 @@ cast:
   - host: 192.168.15.205
   - host: 192.168.15.207
   - host: 192.168.15.212
+pi_hole:
 
 sensor:
   - platform: darksky
@@ -79,11 +80,6 @@ sensor:
       - humidity
       - cloud_cover
       - precip_probability
-  - platform: pi_hole
-    host: 192.168.15.202
-    monitored_conditions:
-      - ads_percentage_today
-      - dns_queries_today
   - platform: template
     sensors:
       david_meeting_status:
