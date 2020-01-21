@@ -66,6 +66,7 @@ cast:
   - host: 192.168.15.207
   - host: 192.168.15.212
 pi_hole:
+  - host: 'pi.hole'
 
 sensor:
   - platform: darksky
