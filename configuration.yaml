@@ -188,6 +188,11 @@ cover:
         password: !secret garadget_password
         name: Garage Door
 
+rainmachine:
+  controllers:
+    - ip_address: rainmaster.local
+      password: !secret rainmaster_password
+
 telegram_bot:
   platform: polling
   api_key: !secret telegram_key
