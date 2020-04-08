@@ -184,8 +184,7 @@ cover:
   - platform: garadget
     covers:
       47004d001151353432393433:
-        username: !secret garadget_username
-        password: !secret garadget_password
+        access_token: !secret garadget_token
         name: Garage Door
 
 rainmachine:
