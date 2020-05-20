@@ -10,7 +10,6 @@ garage_door:
 
 family:
   name: Family
-  view: no
   entities:
     - device_tracker.dc_08_0f_05_40_c4
     - device_tracker.sarahsiphone
@@ -20,19 +19,16 @@ family:
 
 bedroom:
   name: Bedroom
-  view: no
   entities:
     - switch.bed_lights
 
 office:
   name: Office
-  view: no
   entities:
     - sensor.david_meeting_status
     - switch.office_sign
 
 environment:
-  view: yes
   name: Weather
   entities:
     - sun.sun
