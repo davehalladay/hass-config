@@ -56,7 +56,6 @@ weather_darksky:
 
 network:
   name: Network
-  view: yes
   entities:
     - group.internet
     - group.server_monitor
