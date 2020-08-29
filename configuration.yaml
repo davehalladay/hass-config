@@ -353,6 +353,16 @@ automation:
       - service: notify.halladay_bot
         data:
           message: 'The garage has been left open!'
+  - alias: Notify David Garage Fridge
+    trigger:
+      platform: state
+      entity_id: switch.dining_room
+      from: 'off'
+      to: 'unavailable'
+    action:
+      - service: notify.halladay_bot
+        data:
+          message: 'The garage refrigerator may not be running!'
   - alias: Toggle Office Sign On for Meeting
     trigger:
       platform: state
