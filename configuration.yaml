@@ -359,6 +359,10 @@ automation:
       entity_id: switch.dining_room
       from: 'off'
       to: 'unavailable'
+      for:
+        hours: 0
+        minutes: 10
+        seconds: 0
     action:
       - service: notify.halladay_bot
         data:
