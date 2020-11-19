@@ -47,6 +47,12 @@ device_tracker:
       - 192.168.15.202
       - 192.168.15.221
     home_interval: 5
+  - platform: mqtt
+    devices:
+      dave_phone_bt: 'room-assistant/device_tracker/bluetooth-classic-dc-08-0f-09-80-3f-tracker/state'
+    payload_home: 'true'
+    payload_not_home: 'false'
+    source_type: bluetooth
 
 aqualogic:
   host: 192.168.15.222
