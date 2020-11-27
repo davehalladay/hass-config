@@ -417,6 +417,21 @@ automation:
     action:
       service: switch.turn_off
       entity_id: switch.front_door_light
+  - alias: ChristmasTree Lights On
+    trigger:
+      platform: sun
+      event: sunset
+    action:
+      service: switch.turn_on
+      entity_id: switch.christmas_tree
+  - alias: ChristmasTree Lights off
+    trigger:
+      platform: sun
+      event: sunset
+      offset: "04:00:00"
+    action:
+      service: switch.turn_off
+      entity_id: switch.christmas_tree
 
 switch:
   - platform: aqualogic
