@@ -409,14 +409,14 @@ automation:
       event: sunset
     action:
       service: switch.turn_on
-      entity_id: switch.front_door_light
+      entity_id: switch.front_porch_overhead_light
   - alias: Front Lights Off
     trigger:
       platform: sun
       event: sunrise
     action:
       service: switch.turn_off
-      entity_id: switch.front_door_light
+      entity_id: switch.front_porch_overhead_light
   - alias: ChristmasTree Lights On
     trigger:
       platform: sun
