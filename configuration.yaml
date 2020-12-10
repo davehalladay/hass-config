@@ -197,10 +197,10 @@ cover:
         access_token: !secret garadget_token
         name: Garage Door
 
-rainmachine:
-  controllers:
-    - ip_address: rainmaster.local
-      password: !secret rainmaster_password
+# rainmachine:
+#   controllers:
+#     - ip_address: rainmaster.local
+#       password: !secret rainmaster_password
 
 telegram_bot:
   platform: polling
