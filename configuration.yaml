@@ -75,10 +75,6 @@ pi_hole:
   - host: 'pi.hole'
 
 sensor:
-  - platform: zestimate
-    api_key: !secret zestimate_api_key
-    zpid:
-      - !secret zestimate_zpid
   - platform: darksky
     api_key: !secret dark_sky_key
     monitored_conditions:
