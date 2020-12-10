@@ -120,12 +120,6 @@ sensor:
           Unknown
         {% endif %}"
         friendly_name: Circle
-      pollen_rating_today:
-        value_template: "{{ states.sensor.allergy_index_today.attributes.rating}}"
-        friendly_name: Pollen Level Today
-      pollen_today_source:
-        value_template: "{{ states.sensor.allergy_index_today.attributes.allergen_name_1}}"
-        friendly_name: Pollen Primary Source
       garage_door_status:
         friendly_name: 'State of the door'
         value_template: '{{ states.cover.garage_door.state }}'
@@ -148,11 +142,6 @@ sensor:
     api_key: !secret airvisual_api_key
     monitored_conditions:
       - us
-  - platform: pollen
-    zip_code: !secret zip_code
-    monitored_conditions:
-     - allergy_index_today
-     - allergy_index_tomorrow
   - platform: rest
     name: SpaceX
     json_attributes:
