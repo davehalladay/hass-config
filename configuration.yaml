@@ -38,14 +38,12 @@ system_health:
 device_tracker:
   - platform: nmap_tracker
     hosts:
-      - 192.168.15.216
-      - 192.168.15.217
-      - 192.168.15.218
-      - 192.168.15.219
-      - 192.168.15.220
-      - 192.168.15.214
-      - 192.168.15.202
-      - 192.168.15.221
+      - 192.168.68.69
+      - 192.168.68.68
+      - 192.168.68.67
+      - 192.168.68.58
+      - 192.168.68.50
+      - 192.168.68.54
     home_interval: 5
   - platform: mqtt
     devices:
@@ -66,11 +64,6 @@ binary_sensor:
     device_class: occupancy
     value_template: '{{ value_json.state.open }}'
 
-cast:
-  media_player:
-  - host: 192.168.15.205
-  - host: 192.168.15.207
-  - host: 192.168.15.212
 pi_hole:
   - host: 'pi.hole'
 
@@ -109,17 +102,6 @@ sensor:
           Unknown
         {% endif %}"
         friendly_name: Printer
-      circle_status:
-        value_template: "{% if states.device_tracker.circle %}
-        {% if is_state('device_tracker.circle', 'home') %}
-          Online
-        {% else %}
-          Offline
-        {% endif %}
-        {% else %}
-          Unknown
-        {% endif %}"
-        friendly_name: Circle
       garage_door_status:
         friendly_name: 'State of the door'
         value_template: '{{ states.cover.garage_door.state }}'
@@ -224,7 +206,7 @@ speedtestdotnet:
     - upload
 
 lutron_caseta:
-    host: 192.168.15.224
+    host: 192.168.68.52
     keyfile: caseta.key
     certfile: caseta.crt
     ca_certs: caseta-bridge.crt
