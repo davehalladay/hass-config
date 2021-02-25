@@ -326,7 +326,7 @@ automation:
       to: 'In Meeting'
     action:
       - service: switch.turn_on
-        entity_id: switch.office_sign
+        entity_id: switch.office_on_air_sign
   - alias: Toggle Office Sign Off for Free
     trigger:
       platform: state
@@ -335,7 +335,7 @@ automation:
       to: 'Free'
     action:
       - service: switch.turn_off
-        entity_id: switch.office_sign
+        entity_id: switch.office_on_air_sign
   - alias: Launch Alerts
     trigger:
       - platform: template
