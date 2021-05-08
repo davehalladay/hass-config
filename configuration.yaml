@@ -53,7 +53,7 @@ device_tracker:
     source_type: bluetooth
 
 aqualogic:
-  host: 192.168.15.222
+  host: 192.168.68.127
   port: 8899
 
 binary_sensor:
