@@ -45,24 +45,10 @@ device_tracker:
       - 192.168.68.50
       - 192.168.68.54
     home_interval: 5
-  - platform: mqtt
-    devices:
-      dave_phone_bt: 'room-assistant/device_tracker/bluetooth-classic-dc-08-0f-09-80-3f-tracker/state'
-    payload_home: 'true'
-    payload_not_home: 'false'
-    source_type: bluetooth
 
 aqualogic:
   host: 192.168.68.127
   port: 8899
-
-binary_sensor:
-  - platform: rest
-    resource: http://localhost:5000/api/calendarStatus
-    method: GET
-    name: David Meeting
-    device_class: occupancy
-    value_template: '{{ value_json.state.open }}'
 
 pi_hole:
   - host: 'pi.hole'
@@ -82,15 +68,6 @@ sensor:
       - precip_probability
   - platform: template
     sensors:
-      david_meeting_status:
-        value_template: '{% if is_state("binary_sensor.david_meeting", "on") %}In Meeting{% else %}Free{% endif %}'
-        friendly_name: David Status
-        icon_template: >-
-          {% if is_state('binary_sensor.david_meeting', 'on') %}
-            mdi:phone-in-talk
-          {% else %}
-            mdi:phone-hangup
-          {% endif %}
       printer_status:
         value_template: "{% if states.device_tracker.canone3a1e9 %}
         {% if is_state('device_tracker.canone3a1e9', 'home') %}
