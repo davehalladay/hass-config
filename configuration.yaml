@@ -303,7 +303,7 @@ automation:
       to: 'on'
     action:
       - service: switch.turn_on
-        entity_id: switch.office_on_air_sign
+        entity_id: switch.wemo_smart_plug
   - alias: Toggle Office Sign Off for Free
     trigger:
       platform: state
@@ -312,7 +312,7 @@ automation:
       to: 'off'
     action:
       - service: switch.turn_off
-        entity_id: switch.office_on_air_sign
+        entity_id: switch.wemo_smart_plug
   - alias: Launch Alerts
     trigger:
       - platform: template
