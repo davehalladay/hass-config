@@ -54,18 +54,6 @@ pi_hole:
   - host: 'pi.hole'
 
 sensor:
-  - platform: darksky
-    api_key: !secret dark_sky_key
-    monitored_conditions:
-      - summary
-      - temperature
-      - temperature_high
-      - temperature_low
-      - apparent_temperature
-      - wind_speed
-      - humidity
-      - cloud_cover
-      - precip_probability
   - platform: template
     sensors:
       printer_status:
@@ -167,12 +155,6 @@ intent_script:
     speech:
       type: plain
       text: "Test call {{states('device_tracker.' + 'ame')}} {{ Person }}"
-tplink:
-  discovery: false
-  switch:
-    - host: 192.168.15.206
-    - host: 192.168.15.209
-    - host: 192.168.15.213
 
 speedtestdotnet:
   scan_interval:
